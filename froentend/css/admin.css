@@ -1,0 +1,213 @@
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.dashboard-header p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.mini-card {
+  background: white;
+  padding: 1.5rem 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  border-left: 5px solid var(--primary);
+}
+
+.mini-card span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.mini-card label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-lighter);
+  font-weight: 700;
+}
+
+/* Table Card */
+.table-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  border: 1px solid var(--gray-lighter);
+}
+
+.card-header {
+  padding: 1.8rem 2rem;
+  border-bottom: 1px solid var(--gray-lighter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-header h3 {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--text);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: var(--light);
+  padding: 1.2rem;
+  text-align: left;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+td {
+  padding: 1.5rem 1.2rem;
+  border-bottom: 1px solid var(--gray-lighter);
+  vertical-align: middle;
+}
+
+tr:hover {
+  background: #fbfdff;
+}
+
+.patient-name {
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.patient-email {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-confirmed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.action-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.btn-confirm {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.btn-confirm:hover {
+  background: #166534;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-cancel {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.btn-cancel:hover {
+  background: #991b1b;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Dark Mode */
+body.dark .mini-card,
+body.dark .table-card {
+  background: var(--white);
+  border-color: #334155;
+}
+
+body.dark th {
+  background: #0f172a;
+  color: var(--text-light);
+}
+
+body.dark td {
+  border-bottom-color: #334155;
+}
+
+body.dark tr:hover {
+  background: rgba(59, 130, 246, 0.05);
+}
+
+body.dark .dashboard-header h1 {
+  color: white;
+}
+
+body.dark .card-header {
+  border-bottom-color: #334155;
+}
+
+body.dark .card-header h3 {
+  color: white;
+}
+
+body.dark .patient-name {
+  color: white;
+}

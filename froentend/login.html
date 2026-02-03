@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login | City Hospital</title>
+  <link rel="icon" type="image/x-icon" href="pediatrics.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body class="login-page">
+
+  <div class="login-split">
+    <!-- Left: Branding Panel -->
+    <div class="login-brand">
+      <div class="brand-content">
+        <div class="brand-logo">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <h1>City Hospital</h1>
+        <p>Where Compassion Meets Excellence</p>
+        <div class="brand-features">
+          <div class="feature"><i class="fa-solid fa-check-circle"></i> 24/7 Emergency Services</div>
+          <div class="feature"><i class="fa-solid fa-check-circle"></i> 50+ Expert Physicians</div>
+          <div class="feature"><i class="fa-solid fa-check-circle"></i> State-of-the-Art Facilities</div>
+        </div>
+      </div>
+      <div class="brand-footer">
+        <p>© 2026 City Hospital. All rights reserved.</p>
+      </div>
+    </div>
+
+    <!-- Right: Login Card -->
+    <div class="login-form-side">
+      <div class="login-card" data-aos="fade-left">
+        <div class="login-header">
+          <div class="login-icon">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <h2>Admin Portal</h2>
+          <p>Sign in to manage hospital operations</p>
+        </div>
+
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+            <input id="email" type="email" placeholder="admin@cityhospital.com" required autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
+            <div class="password-wrapper">
+              <input id="password" type="password" placeholder="••••••••" required autocomplete="current-password" />
+              <button type="button" class="toggle-password" onclick="togglePassword()">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="remember-row">
+            <label class="checkbox-label">
+              <input type="checkbox" /> Remember me
+            </label>
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fa-solid fa-right-to-bracket"></i> Sign In
+          </button>
+        </form>
+
+        <div class="login-footer">
+          <a href="home.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/home.js"></script>
+  <script src="js/login.js"></script>
+  <script>
+    function togglePassword() {
+      const passInput = document.getElementById('password');
+      const icon = document.querySelector('.toggle-password i');
+      if (passInput.type === 'password') {
+        passInput.type = 'text';
+        icon.classList.replace('fa-eye', 'fa-eye-slash');
+      } else {
+        passInput.type = 'password';
+        icon.classList.replace('fa-eye-slash', 'fa-eye');
+      }
+    }
+  </script>
+</body>
+
+</html>

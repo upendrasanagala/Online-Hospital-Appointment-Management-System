@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Appointment | City Hospital</title>
+  <link rel="icon" type="image/x-icon" href="pediatrics.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/appointment.css" />
+</head>
+
+<body class="bg-light">
+
+  <header class="navbar">
+    <div class="logo" onclick="location.href='home.html'" style="cursor:pointer">
+      <i class="fa-solid fa-heart-pulse"></i>
+      City Hospital
+    </div>
+    <div class="nav-links">
+      <a href="home.html" class="btn btn-outline">Back to Home</a>
+    </div>
+  </header>
+
+  <div class="container section-padding">
+    <div class="form-wrapper" data-aos="fade-up">
+      <div class="form-header">
+        <i class="fa-solid fa-calendar-check"></i>
+        <h2>Book Your Appointment</h2>
+        <p>Please provide your details below to schedule a visit.</p>
+      </div>
+
+      <form id="appointmentForm">
+        <div class="form-section">
+          <label><i class="fa-solid fa-user"></i> Patient Information</label>
+          <input id="name" placeholder="Full Name" required />
+          <div class="form-row">
+            <input id="email" type="email" placeholder="Email Address" required />
+            <input id="phone" placeholder="Phone Number" required />
+          </div>
+          <div class="form-row">
+            <input id="dob" type="text" onfocus="(this.type='date')" placeholder="Date of Birth" required />
+            <select id="bloodGroup">
+              <option value="" disabled selected>Blood Group</option>
+              <option>A+</option>
+              <option>A-</option>
+              <option>B+</option>
+              <option>AB+</option>
+              <option>AB-</option>
+              <option>B-</option>
+              <option>O+</option>
+              <option>O-</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label><i class="fa-solid fa-clock"></i> Appointment Details</label>
+          <input id="appointmentDate" type="text" onfocus="(this.type='date')" placeholder="Preferred Date" required />
+          <select id="department" required>
+            <option value="" disabled selected>Select Department</option>
+            <option>General Medicine</option>
+            <option>Pediatrics</option>
+            <option>Orthopedics</option>
+            <option>Cardiology</option>
+            <option>Dermatology</option>
+            <option>Neurology</option>
+          </select>
+          <textarea id="symptoms" placeholder="Briefly describe your symptoms or reason for visit..."></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn btn-primary btn-full">
+          <span class="btn-text">Confirm Booking</span>
+        </button>
+        <div id="formError" class="form-error"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/home.js"></script> <!-- For AOS/Theme -->
+  <script src="js/appointment.js"></script>
+</body>
+
+</html>

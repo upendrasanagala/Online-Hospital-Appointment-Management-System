@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Track Appointment | City Hospital</title>
+  <link rel="icon" type="image/x-icon" href="pediatrics.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/status.css" />
+</head>
+
+<body class="bg-light">
+
+  <header class="navbar">
+    <div class="logo" onclick="location.href='home.html'" style="cursor:pointer">
+      <i class="fa-solid fa-heart-pulse"></i>
+      City Hospital
+    </div>
+    <div class="nav-links">
+      <a href="home.html" class="btn btn-outline">Back to Home</a>
+    </div>
+  </header>
+
+  <div class="container section-padding">
+    <div class="status-wrapper" data-aos="fade-up">
+      <div class="status-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+        </div>
+        <h2>Track Your Appointment</h2>
+        <p>Enter your registered email address to see your booking history and status.</p>
+
+        <div class="search-box">
+          <input id="email" type="email" placeholder="e.g. patient@example.com" />
+          <button onclick="checkStatus()" class="btn btn-primary">Track Now</button>
+        </div>
+
+        <div id="result" class="result-area">
+          <!-- Results populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/home.js"></script>
+  <script src="js/status.js"></script>
+</body>
+
+</html>
