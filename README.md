@@ -1,97 +1,86 @@
-# Online-Hospital-Appointment-Management-System
+# Online Hospital Appointment Management System
 
-An end-to-end web application designed to simplify hospital appointment booking, management, and tracking for patients and administrators.
+A simple web application that helps patients book hospital appointments online and allows admins to manage them efficiently.
 
-📌 Features
-👤 Patient
+---
 
-Book appointments with doctors by department
+## What this project does
 
-View appointment status
+* Patients can book appointments by department
+* Admins can view and manage all appointments
+* Appointment status can be checked anytime
 
-Simple and user-friendly interface
+---
 
-🧑‍⚕️ Admin
+## Technologies Used
 
-Manage departments and doctors
+* **Frontend:** HTML, CSS, JavaScript
+* **Backend:** Node.js, Express, TypeScript
+* **Database:** MySQL (SQLite used if MySQL is unavailable)
 
-View and manage all appointments
+---
 
-Update appointment status
+## How to run the project
 
-🛠️ Tech Stack
-Frontend
+### Step 1: Clone the project
 
-HTML
-
-CSS
-
-JavaScript
-
-Backend
-
-Node.js
-
-Express.js
-
-TypeScript
-
-Database
-
-MySQL (Primary)
-
-SQLite (Fallback for local testing)
-
-Tools
-
-Sequelize ORM
-
-Git & GitHub
-
-📂 Project Structure
-Hospital project/
-│
-├── backend/
-│   ├── src/
-│   │   ├── config/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   └── server.ts
-│   ├── package.json
-│   └── tsconfig.json
-│
-├── frontend/
-│   ├── html files
-│   ├── css/
-│   └── js/
-│
-└── README.md
-
-⚙️ Installation & Setup
-1️⃣ Clone the repository
+```bash
 git clone https://github.com/upendrasanagala/Online-Hospital-Appointment-Management-System.git
 cd Online-Hospital-Appointment-Management-System
+```
 
-2️⃣ Backend setup
+---
+
+### Step 2: Backend setup
+
+```bash
 cd backend
 npm install
+```
 
+Create a `.env` file:
 
-Create a .env file:
-
+```
 DB_NAME=your_db_name
 DB_USER=root
 DB_PASS=your_password
 DB_HOST=localhost
 PORT=3000
+```
 
+Start the server:
 
-Run the server:
-
+```bash
 npm run dev
+```
 
-3️⃣ Frontend setup
+---
 
-Open the frontend HTML files directly in your browser
-(or use Live Server in VS Code).
+### Step 3: Frontend
+
+Open the frontend HTML files in your browser
+(or use VS Code Live Server).
+
+---
+
+## Project structure (short)
+
+```
+backend/   → API, database, server
+frontend/  → UI files
+```
+
+---
+
+## Who uses this
+
+* **Patients:** book and check appointments
+* **Admin:** manage appointments and departments
+
+---
+
+## Author
+
+Upendra Sanagala
+📧 [upendrasanagala13@gmail.com](mailto:upendrasanagala13@gmail.com)
+🔗 [https://www.linkedin.com](www.linkedin.com/in/upendra-sanagala-301a63302)
